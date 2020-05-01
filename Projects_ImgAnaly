@@ -1,0 +1,117 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+
+<head>
+<title>Teaching | Liang-Jian Deng</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="Liang-Jian Deng, 邓良剑, UESTC"> 
+<meta name="description" content="Liang-Jian's home page">
+<link rel="stylesheet" href="style.css" type="text/css" media="screen">
+
+<link rel="shortcut icon" href="Imgs/miv.png">
+
+<script type="text/javascript">
+onload = function(){
+    document.getElementById("lastModified").innerHTML = "Last update: " + document.lastModified.split(" ")[0];
+}
+</script>
+</head>
+
+
+	
+
+
+
+<!-- <br>: go to a new row; 
+    
+-->
+	
+
+<p><span class="style8"><font face="Arial">
+<a href="index.html" style="color: blue"><font size="4" face="Arial"><= Home</font></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></span></p>
+
+	
+  
+<div id="container">
+<div id ="mainbody">
+<a  name="Teaching">&nbsp; </a>
+<h2>For Undergraduates:</h2>
+
+
+
+<table border=0 cellpadding=0 width=100% cellspacing="10" style="line-height:18pt;  border-spacing: 60 6px;"> 	
+
+<!--Advices to undergraduates -->	
+
+
+<ul>
+<li><a href="teaching/working_comment.pdf" style="color: blue">
+<span lang="zh-cn"><font style="font-size: 14pt;" face="楷体">[1] 给本科生的一点建议-工作篇.pdf</span></font> <br>
+<a href="teaching/NA_comment.ppt" style="color: blue">
+<span lang="zh-cn"><font style="font-size: 14pt;" face="楷体">[2] 给大一的一点建议-线性代数篇.ppt</span></font> <br>
+</li>
+</ul>	
+<br> 
+<br>
+
+	
+	
+	
+<!--Course files -->
+<table class="imgtable"><tr><td>
+<img src="teaching/Numer_Alge/nasp.jpg" alt="" width="200px" /> </td>
+<td align="left"><p>
+<ul>
+<li><em><font size="4" face="Arial">Linear algebra and space analytic geometry </font></em>
+<span lang="zh-cn"><font style="font-size: 14pt;" face="楷体">(线性代数与空间解析几何)</span></font> <br> 
+<span lang="zh-cn"><font style="font-size: 12pt;" style="color: blue"; face="楷体">如要公开使用此PPT，请注明来自电子科技大学.数学科学学院.线性代数课程组</span></font> <br> 
+<br>
+<a href="teaching/Numer_Alge/1.1.PPT" style="color: blue">[Chap. 1.1]</a>
+&nbsp;<a href="teaching/Numer_Alge/1.2.PPT" style="color: blue">[Chap. 1.2]</a>
+&nbsp;<a href="teaching/Numer_Alge/1.3.PPT" style="color: blue">[Chap. 1.3]</a>	
+&nbsp;<a href="teaching/Numer_Alge/1.4.PPT" style="color: blue">[Chap. 1.4]</a> <br>
+</li>
+</ul>
+</td></tr></table>
+
+
+
+
+
+
+
+
+
+	
+	
+
+	
+
+
+		
+ </table>
+ 
+<br>
+<br>
+<br>
+
+<div id="container">
+<div id ="mainbody">
+
+<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=280&t=tt&d=q42AWpXg8o1ihfMjBGE2spzYkI7CTpIm16KpWAUdnT0'></script>
+
+
+<p class="auto-style7"  align="center"><font size="4" face="Arial">
+<span id="lastModified"></span></font></p> 
+
+  
+</div>
+</div>
+</div>
+
+</body>
+
+</html>
