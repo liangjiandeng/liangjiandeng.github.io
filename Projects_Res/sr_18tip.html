@@ -101,50 +101,39 @@
 <!---------------------------------Show flowchart figure---------------------------------------------------- ------>   
 		    <p align="center" style="text-align:justify">&nbsp;</p>
 		    <h2 align="center" style="text-align:centre">From SRCNN to FSRCNN</h2>
-				<p align="center" style="text-align:centre"><span style="text-align:justify"><img src="FSRCNN/img/framework.png" width="1073" height="397" alt="1"></span></p>
+				<p align="center" style="text-align:centre"><span style="text-align:justify"><img src="sr_18tip_fig1.png" width="1073" height="397" alt="1"></span></p>
 <!---------------------------------figure caption---------------------------------------------------- ------>   
-		    <h4 style="text-align:justify">This figure shows the network structures of the SRCNN and FSRCNN. The proposed FSRCNN is 
-			  different from SRCNN mainly in three aspects. First, FSRCNN adopts the original low-resolution 
-			  image as input without bicubic interpolation. A deconvolution layer is introduced at the end of 
-			  the network to perform upsampling. Second, The non-linear mapping step in SRCNN is replaced by three 
-			  steps in FSRCNN, namely the shrinking, mapping, and expanding step. Third, FSRCNN adopts smaller filter
-			  sizes and a deeper network structure. These improvements provide FSRCNN with better performance but lower
-			  computational cost than SRCNN.</h4>
-
+		    <h4 style="text-align:justify">The flowchart of RKHSpan method for pansharpening.</h4>
 		  </div>
         </div>
-		<div class="row">
+		
+<!---------------------------------Code link---------------------------------------------------- ------>   	    
+	    <div class="row">
 		  <blockquote>
-		    <h2 align="left" style="text-align:left">Code and Dataset</h2>
+		    <h2 align="left" style="text-align:left">Code</h2>
 		    <ul>
-		      <li>
+		    <li>
 		        <h4 style="text-align:justify">
-	            Matlab test code <a href="https://drive.google.com/open?id=0B7tU5Pj1dfCMVktYZUN2aV8xVTQ"><button class="btn btn-success btn-primary" type="button" )"=""><span class="glyphicon glyphicon-file"></span>Matlab code</button></a></h4>
-	          </li>
-		      <li>
-		        <h4 style="text-align:justify">Caffe training  code <a href="https://drive.google.com/open?id=0B7tU5Pj1dfCMWjhhaE1HR3dqcGs"><button class="btn btn-success btn-primary" type="button" )"=""><span class="glyphicon glyphicon-file"></span>Caffe code</button></a></h4>
-		      </li>
-              <li>
-		        <h4 style="text-align:justify">General-100 dataset <a href="https://drive.google.com/open?id=0B7tU5Pj1dfCMVVdJelZqV0prWnM"><button class="btn btn-success btn-primary" type="button" )"=""><span class="glyphicon glyphicon-file"></span>General-100</button></a></h4>
-		      </li>
+	            Matlab Code: <a href="https://drive.google.com/open?id=0B7tU5Pj1dfCMVktYZUN2aV8xVTQ"><button class="btn btn-success btn-primary" type="button" )"=""><span class="glyphicon glyphicon-file"></span>Matlab code</button></a></h4>
+	            </li>
 		    </ul>
 	      </blockquote>
 	  </div>
+
+<!---------------------------------Citation---------------------------------------------------- ------>   
 	  <div class="row">
 		<blockquote>
 		  <h2 style="text-align:left">Citation</h2>
-		  <h4>Chao Dong, Chen Change Loy, Xiaoou Tang. Accelerating the Super-Resolution Convolutional Neural Network, in Proceedings of European Conference on Computer Vision (ECCV), 2016</h4>
-		  <a href="https://arxiv.org/abs/1608.00367">
-		  <button class="btn btn-success btn-primary" type="button" )"=""><span class="glyphicon glyphicon-file"></span>PDF</button>
-          </a> 
-          <a href="http://101.110.118.71/personal.ie.cuhk.edu.hk/~ccloy/files/eccv_2016_accelerating_supp.pdf">
-		  <button class="btn btn-success btn-primary" type="button" )"=""><span class="glyphicon glyphicon-file"></span>Supplementary File</button>
-          </a>
-		</blockquote>
-		<h4 style="text-align:justify">&nbsp;</h4>
-		<h4 style="text-align:justify">&nbsp;</h4>
-		
-
+	          <font style="font-size: 14pt;" face="Arial">
+  			<p> @ARTICLE{rkhspan, <br>
+			<p> author={L. {Deng} and G. {Vivone} and W. {Guo} and M. {Dalla Mura} and J. {Chanussot}}, <br>
+			<p> journal={IEEE Transactions on Image Processing}, <br>
+			<p> title={A Variational Pansharpening Approach Based on Reproducible Kernel Hilbert Space and Heaviside Function}, <br>
+			<p> year={2018}, <br>
+			<p> volume={27}, <br>
+			<p> number={9}, <br>
+			<p> pages={4330-4344},<br>
+			<p> }<br>
 	  </div>
         <!-- /.row -->
 
