@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Accelerating the Super-Resolution Convolutional Neural Network</title>
+    <title>A variational pansharpening approach based on reproducible kernel Hilbert space and Heaviside function</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="FSRCNN/css/bootstrap.min.css" rel="stylesheet">
@@ -63,6 +63,9 @@
         </script>    
 </head>
 
+<p><span class="style8"><font face="Arial">
+<a href="index.html" style="color: blue"><font size="4" face="Arial"><= Home</font></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></span></p>
 	
 <!------------------------------------------------------------------------------------- ------>   
 <!---------------------------------MAIN Body---------------------------------------------------- ------>   
@@ -76,27 +79,25 @@
         <div class="row">
             <div class="col-lg-12 text-center">
 <!---------------------------------Title---------------------------------------------------- ------>   
-                <h1 align="center">Accelerating the Super-Resolution Convolutional Neural Network</h1>
+                <h1 align="center">A variational pansharpening approach based on reproducible kernel Hilbert space and Heaviside function</h1>
 <!---------------------------------Authors---------------------------------------------------- ------>   
-              <p align="center" class="lead STYLE1"><strong>Chao Dong, Chen Change Loy, Xiaoou Tang</strong></p>
-				<p align="center" class="lead"><strong>Department of Information Engineering, The Chinese University of Hong Kong</strong></p>
-				<p align="center" class="lead">dongchao@sensetime.com, {ccloy, xtang}@ie.cuhk.edu.hk</p>
+              <p align="center" class="lead STYLE1"><strong>Liang-Jian Deng, Gemine Vivone, Weihong Guo, Mauro Dalla Mura, Jocelyn Chanussot</strong></p>
+				<p align="center" class="lead"><strong>UESTC </strong></p>
 				<h2 align="center" style="text-align:centre">&nbsp;</h2>
 <!---------------------------------Abstract---------------------------------------------------- ------>   
 				<h2 align="center" style="text-align:centre">Abstract</h2>
-				  <h4 align="center" style="text-align:justify"> As a successful deep model applied in image super-resolution (SR), 
-					  the Super-Resolution Convolutional Neural Network (SRCNN) has demonstrated superior performance to the 
-					  previous hand-crafted models either in speed and restoration quality. However, the high computational 
-					  cost still hinders it from practical usage that demands real-time performance (24 fps). In this paper, 
-					  we aim at accelerating the current SRCNN, and propose a compact hourglass-shape CNN structure for faster and
-					  better SR. We re-design the SRCNN structure mainly in three aspects. First, we introduce a deconvolution layer
-					  at the end of the network, then the mapping is learned directly from the original low-resolution image 
-					  (without interpolation) to the high-resolution one. Second, we reformulate the mapping layer by shrinking 
-					  the input feature dimension before mapping and expanding back afterwards. Third, we adopt smaller filter
-					  sizes but more mapping layers. The proposed model achieves a speed up of more than 40 times with even 
-					  superior restoration quality. Further, we present the parameter settings that can achieve real-time 
-					  performance on a generic CPU while still maintaining good performance. A corresponding transfer 
-					  strategy is also proposed for fast training and testing across different upscaling factors.</h4>
+				  <h4 align="center" style="text-align:justify"> Pansharpening is an important application in 
+					  remote sensing image processing. It can increase the spatialresolution of a multispectral 
+					  image by fusing it with a high spatial-resolution panchromatic image in the same scene, 
+					  which brings great favor for subsequent processing such as recognition, detection, etc. 
+					  In this paper, we propose a continuous modeling and sparse optimization based method for 
+					  the fusion of a panchromatic image and a multispectral image. The proposed model is mainly 
+					  based on reproducing kernel Hilbert space (RKHS) and approximated Heaviside function (AHF). 
+					  In addition, we also propose a Toeplitz sparse term for representing the correlation of 
+					  adjacent bands. The model is convex and solved by the alternating direction method of 
+					  multipliers which guarantees the convergence of the proposed method. Extensive experiments 
+					  on many real datasets collected by different sensors demonstrate the effectiveness of the
+					  proposed technique as compared with several state-of-the-art pansharpening approaches.</h4>
 
 <!---------------------------------Show flowchart figure---------------------------------------------------- ------>   
 		    <p align="center" style="text-align:justify">&nbsp;</p>
