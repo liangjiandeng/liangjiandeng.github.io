@@ -1,279 +1,59 @@
-<html lang="en"><head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
-    <title>Accelerating the Super-Resolution Convolutional Neural Network</title>
+<head>
+<title>Liang-Jian Deng | UESTC</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="Liang-Jian Deng, 邓良剑, UESTC"> 
+<meta name="description" content="Liang-Jian's home page">
+<link rel="stylesheet" href="style.css" type="text/css" media="screen">
 
-    <!-- Bootstrap Core CSS -->
-    <link href="FSRCNN/css/bootstrap.min.css" rel="stylesheet">
+<link rel="shortcut icon" href="Imgs/miv.png">
 
-    <!-- Custom CSS -->
-    <style>
-    body {
-        padding-top: 70px;
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    }
-    .STYLE1 {font-size: 18px}
-    .STYLE2 {font-size: 14px}
-    #Layer1 {
-	position:absolute;
-	left:105px;
-	top:232px;
-	width:1449px;
-	height:226px;
-	z-index:1;
+<script type="text/javascript">
+onload = function(){
+    document.getElementById("lastModified").innerHTML = "Last update: " + document.lastModified.split(" ")[0];
 }
-    #Layer2 {
-	position:absolute;
-	left:105px;
-	top:459px;
-	width:1450px;
-	height:266px;
-	z-index:2;
-}
-    .STYLE3 {
-	font-size: 16px;
-	font-weight: bold;
-}
-    </style>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-        <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript">
-            
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-22940424-1']);
-            _gaq.push(['_trackPageview']);
-            
-            (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-            
-        </script>    
+</script>
 </head>
 
-<body data-gr-c-s-loaded="true">
 
-    <!-- Navigation -->
-    <!-- Page Content -->
-    <div class="container">
+	
+<body leftmargin="40" text="#444444" link="#444444" bgcolor="#FFFFFF">
+    <table id="table1" width="920" border="0">
+      <tbody>
+        <tr>
+          <td width="223">
+            <p align="left"><font face="Arial"><img src="ljdeng.JPG" height="213"
+                  border="0"></font></p>
+          </td>
+          <td> <b><font style="font-size: 24pt;" face="Arial">&nbsp;&nbsp;Liang-Jian Deng&nbsp;</font> <span
+                  lang="zh-cn"><font style="font-size: 27pt;" face="楷体">(邓良剑)</span></b></font>
+            <p> <font style="font-size: 13pt;" face="Arial">&nbsp;&nbsp;&nbsp;
+                </font> </p>
+            <!-- <p> <font style="font-size: 13pt;"  face="Arial">&nbsp;&nbsp;&nbsp; -->
+                <!-- <a href="https://xmu-smartdsp.github.io/" style="color: blue">Lab of Smart Data and Signal Processing</a></font> </p> -->
+            <p> <font style="font-size: 13pt;" face="Arial">&nbsp;&nbsp;&nbsp;
+                University of Electronic Science and Technology of China</font> </p>
+            <p> <font style="font-size: 13pt;" face="Arial">&nbsp;&nbsp;&nbsp;
+                Email: liangjian.deng@uestc.edu.cn</font> </p>
+	    <p> <font style="font-size: 13pt;" face="Arial">&nbsp;&nbsp;&nbsp;
+                Office: Innovation Center A-401, Qingshuihe Campus, Chengdu, Sichuan, China</font> </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</body>
 
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h1 align="center">Accelerating the Super-Resolution Convolutional Neural Network</h1>
-              <p align="center" class="lead STYLE1"><strong>Chao Dong, Chen Change Loy, Xiaoou Tang</strong></p>
-				<p align="center" class="lead"><strong>Department of Information Engineering, The Chinese University of Hong Kong</strong></p>
-				<p align="center" class="lead">dongchao@sensetime.com, {ccloy, xtang}@ie.cuhk.edu.hk</p>
-				<h2 align="center" style="text-align:centre">&nbsp;</h2>
-				<h2 align="center" style="text-align:centre">Abstract</h2>
-				  <h4 align="center" style="text-align:justify"> As a successful deep model applied in image super-resolution (SR), the Super-Resolution Convolutional Neural Network (SRCNN) has demonstrated superior performance to the previous hand-crafted models either in speed and restoration quality. However, the high computational cost still hinders it from practical usage that demands real-time performance (24 fps). In this paper, we aim at accelerating the current SRCNN, and propose a compact hourglass-shape CNN structure for faster and better SR. We re-design the SRCNN structure mainly in three aspects. First, we introduce a deconvolution layer at the end of the network, then the mapping is learned directly from the original low-resolution image (without interpolation) to the high-resolution one. Second, we reformulate the mapping layer by shrinking the input feature dimension before mapping and expanding back afterwards. Third, we adopt smaller filter sizes but more mapping layers. The proposed model achieves a speed up of more than 40 times with even superior restoration quality. Further, we present the parameter settings that can achieve real-time performance on a generic CPU while still maintaining good performance. A corresponding transfer strategy is also proposed for fast training and testing across different upscaling factors.</h4>
-				<p align="center" style="text-align:justify">&nbsp;</p>
-				<h2 align="center" style="text-align:centre">From SRCNN to FSRCNN</h2>
-				<p align="center" style="text-align:centre"><span style="text-align:justify"><img src="FSRCNN/img/framework.png" width="1073" height="397" alt="1"></span></p>
-                  <h4 style="text-align:justify">This figure shows the network structures of the SRCNN and FSRCNN. The proposed FSRCNN is different from SRCNN mainly in three aspects. First, FSRCNN adopts the original low-resolution image as input without bicubic interpolation. A deconvolution layer is introduced at the end of the network to perform upsampling. Second, The non-linear mapping step in SRCNN is replaced by three steps in FSRCNN, namely the shrinking, mapping, and expanding step. Third, FSRCNN adopts smaller filter sizes and a deeper network structure. These improvements provide FSRCNN with better performance but lower computational cost than SRCNN.</h4>
-                  <h4 style="text-align:justify">&nbsp;</h4>
-				<h2 align="center"><span style="text-align:centre">Results</span></h2>
-				<p align="center" style="text-align:centre"><span style="text-align:justify"> <img src="FSRCNN/img/timevspsnr.png" alt="1" width="853" height="398" align="middle"></span></p>
-          <h4 style="text-align:justify">The proposed FSRCNN networks could achieve better super-resolution quality than existing methods, and are tens of times faster. Especially, the FSRCNN-s can be implemented in real-time (&gt;24 fps) on a generic CPU. The chart is based on Set14 results summarized in the following table.</h4>
-                  <h4 style="text-align:justify">&nbsp;</h4>
-				<p align="center" class="STYLE1"><strong> The results of PSNR (dB) and test time (sec on CPU) on three test datasets. We present the best results reported in the corresponding paper. The proposed FSCNN and FSRCNN-s are trained on both 91-image and General-100 dataset. More comparisons with other methods on PSNR, SSIM and IFC can be found in the supplementary file.</strong></p>
-				<table width="900" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#000000" bgcolor="#FFFFCC">
-                  <tbody><tr>
-                    <td width="98" height="55" bordercolor="#000000" bgcolor="#FFFFCC"><div align="center" class="STYLE3">
-                      <p>test </p>
-                      <p>dataset</p>
-                    </div></td>
-                    <td width="89" height="55" bordercolor="#000000" bgcolor="#FFFFCC"><div align="center">
-                      <p class="STYLE3">scaling</p>
-                      <p class="STYLE3">factor<strong></strong></p>
-                    </div></td>
-                    <td width="119" height="55" bordercolor="#000000" bgcolor="#FFFFCC"><div align="center">
-                      <p class="STYLE3">Bicubic</p>
-                      <p><strong>PSNR / Time</strong></p>
-                    </div></td>
-                    <td width="119" height="55" bordercolor="#000000" bgcolor="#FFFFCC"><div align="center">
-                      <p class="STYLE3">SRCNN [1]</p>
-                      <p><strong>PSNR / Time</strong></p>
-                    </div></td>
-                    <td width="119" bordercolor="#000000" bgcolor="#FFFFCC"><p class="STYLE3">SRCNN-Ex [2]</p>
-                    <p><strong>PSNR / Time</strong></p></td>
-                    <td width="119" bordercolor="#000000" bgcolor="#FFFFCC"><p class="STYLE3">SCN [3]</p>
-                    <p><strong>PSNR / Time</strong></p></td>
-                    <td width="119" bordercolor="#000000" bgcolor="#FFFFCC"><p class="STYLE3">FSRCNN-S</p>
-                    <p><strong>PSNR / Time</strong></p></td>
-                    <td width="118" bordercolor="#000000" bgcolor="#FFFFCC"><p class="STYLE3">FSRCNN</p>
-                    <p><strong>PSNR / Time</strong></p></td>
-                  </tr>
-                  <tr>
-                    <td height="40" bordercolor="#000000" bgcolor="#FFFFCC"><p>Set5</p>
-                    <p>Set14</p>
-                    <p>B200</p></td>
-                    <td height="40" bordercolor="#000000" bgcolor="#FFFFCC"><div align="center">
-                      <p>2</p>
-                      <p>2</p>
-                      <p>3</p>
-                    </div></td>
-                    <td height="40" bordercolor="#000000" bgcolor="#FFFFCC"><div align="center">
-                      <p>33.66 / -</p>
-                      <p>30.23 / -</p>
-                      <p>29.70 / -</p>
-                    </div></td>
-                    <td width="119" height="40" bordercolor="#000000" bgcolor="#FFFFCC"><div align="center">
-                      <p>36.34 / 0.18</p>
-                      <p>32.18 / 0.39</p>
-                      <p>31.38 / 0.23</p>
-                    </div></td>
-                    <td bordercolor="#000000" bgcolor="#FFFFCC"><p>36.66 / 1.3</p>
-                    <p>32.45 / 2.8</p>
-                    <p>31.63 / 1.7</p></td>
-                    <td bordercolor="#000000" bgcolor="#FFFFCC"><p>36.93 / 0.94</p>
-                    <p>33.10 / 1.7</p>
-                    <p>31.63 / 1.1</p></td>
-                    <td bordercolor="#000000" bgcolor="#FFFFCC"><p>36.58 / <strong>0.024</strong></p>
-                    <p>32.28 / <strong>0.061</strong></p>
-                    <p>31.48 / <strong>0.033</strong></p></td>
-                    <td bordercolor="#000000" bgcolor="#FFFFCC"><p><strong>37.00</strong> / 0.068</p>
-                    <p><strong>32.63</strong> / 0.160</p>
-                    <p><strong>31.80</strong> / 0.098</p></td>
-                  </tr>
-                  <tr>
-                    <td height="40" bordercolor="#000000" bgcolor="#FFFFCC"><div align="center">
-                      <p>Set5</p>
-                      <p>Set14</p>
-                      <p>B200</p>
-                    </div></td>
-                    <td height="40" bordercolor="#000000" bgcolor="#FFFFCC"><div align="center">
-                      <p>3</p>
-                      <p>3</p>
-                      <p>3</p>
-                    </div></td>
-                    <td height="40" bordercolor="#000000" bgcolor="#FFFFCC"><div align="center">
-                      <p>30.39 / -</p>
-                      <p>27.54 / -</p>
-                      <p>27.26 / -</p>
-                    </div></td>
-                    <td width="119" height="40" bordercolor="#000000" bgcolor="#FFFFCC"><div align="center">
-                      <p>32.39 / 0.18</p>
-                      <p>29.00 / 0.39</p>
-                      <p>28.28 / 0.23</p>
-                    </div></td>
-                    <td bordercolor="#000000" bgcolor="#FFFFCC"><p>32.75 / 1.3</p>
-                    <p>29.30 / 2.8</p>
-                    <p>28.48 / 1.7</p></td>
-                    <td bordercolor="#000000" bgcolor="#FFFFCC"><p>33.10 / 1.8</p>
-                    <p>29.41 / 3.6</p>
-                    <p>28.54 / 2.4</p></td>
-                    <td bordercolor="#000000" bgcolor="#FFFFCC"><p>32.61 / <strong>0.010</strong></p>
-                    <p>29.13 / <strong>0.023</strong></p>
-                    <p>28.32 / <strong>0.013</strong></p></td>
-                    <td bordercolor="#000000" bgcolor="#FFFFCC"><p><strong>33.16</strong> / 0.027</p>
-                    <p><strong>29.43</strong> / 0.061</p>
-                    <p><strong>28.60</strong> / 0.035</p></td>
-                  </tr>
-                  <tr>
-                    <td height="40" bordercolor="#000000" bgcolor="#FFFFCC"><div align="center">
-                      <p>Set5</p>
-                      <p>Set14</p>
-                      <p>B200</p>
-                    </div></td>
-                    <td height="40" bordercolor="#000000" bgcolor="#FFFFCC"><div align="center">
-                      <p>4</p>
-                      <p>4</p>
-                      <p>4</p>
-                    </div></td>
-                    <td height="40" bordercolor="#000000" bgcolor="#FFFFCC"><div align="center">
-                      <p>28.42 / -</p>
-                      <p>26.00 / -</p>
-                      <p>25.97 / -</p>
-                    </div></td>
-                    <td width="119" height="40" bordercolor="#000000" bgcolor="#FFFFCC"><div align="center">
-                      <p>30.09 / 0.18</p>
-                      <p>27.20 / 0.39</p>
-                      <p>26.73 / 0.23</p>
-                    </div></td>
-                    <td bordercolor="#000000" bgcolor="#FFFFCC"><p>30.49 / 1.3</p>
-                    <p>27.50 / 2.8</p>
-                    <p>26.92 / 1.7</p></td>
-                    <td bordercolor="#000000" bgcolor="#FFFFCC"><p><strong>30.86</strong> / 1.2</p>
-                    <p><strong>27.64</strong> / 2.3</p>
-                    <p><strong>27.02</strong> / 1.4</p></td>
-                    <td bordercolor="#000000" bgcolor="#FFFFCC"><p>30.11 / <strong>0.0052</strong></p>
-                    <p>27.19 / <strong>0.0099</strong></p>
-                    <p>26.75 / <strong>0.0072</strong></p></td>
-                    <td bordercolor="#000000" bgcolor="#FFFFCC"><p>30.71 / 0.015</p>
-                    <p>27.59 / 0.029</p>
-                    <p>26.98 / 0.019</p></td>
-                  </tr>
-			    </tbody></table>
-<p style="text-align:justify">&nbsp;</p>
-				
-				  <p align="center" class="STYLE2" style="text-align:justify">[1] Dong, C., Loy, C.C., He, K., Tang, X.: Learning a deep convolutional network for image
-			      super-resolution. In: ECCV. (2014) 184–199.</p>
-			    <p align="center" class="STYLE2" style="text-align:justify">[2] Dong, C., Loy, C.C., He, K., Tang, X.: Image super-resolution using deep convolutional
-		        networks. TPAMI 38(2) (2015) 295–307.</p>
-			    <p align="center" class="STYLE2" style="text-align:justify">[3] Wang, Z., Liu, D., Yang, J., Han, W., Huang, T.: Deeply improved sparse coding for image 
-		        super-resolution. ICCV (2015) 370–378.</p>
-			  
-				<p></p><p></p>
-		  </div>
-        </div>
-		<div class="row">
-		  <blockquote>
-		    <h2 align="left" style="text-align:left">Code and Dataset</h2>
-		    <ul>
-		      <li>
-		        <h4 style="text-align:justify">
-	            Matlab test code <a href="https://drive.google.com/open?id=0B7tU5Pj1dfCMVktYZUN2aV8xVTQ"><button class="btn btn-success btn-primary" type="button" )"=""><span class="glyphicon glyphicon-file"></span>Matlab code</button></a></h4>
-	          </li>
-		      <li>
-		        <h4 style="text-align:justify">Caffe training  code <a href="https://drive.google.com/open?id=0B7tU5Pj1dfCMWjhhaE1HR3dqcGs"><button class="btn btn-success btn-primary" type="button" )"=""><span class="glyphicon glyphicon-file"></span>Caffe code</button></a></h4>
-		      </li>
-              <li>
-		        <h4 style="text-align:justify">General-100 dataset <a href="https://drive.google.com/open?id=0B7tU5Pj1dfCMVVdJelZqV0prWnM"><button class="btn btn-success btn-primary" type="button" )"=""><span class="glyphicon glyphicon-file"></span>General-100</button></a></h4>
-		      </li>
-		    </ul>
-	      </blockquote>
-	  </div>
-	  <div class="row">
-		<blockquote>
-		  <h2 style="text-align:left">Citation</h2>
-		  <h4>Chao Dong, Chen Change Loy, Xiaoou Tang. Accelerating the Super-Resolution Convolutional Neural Network, in Proceedings of European Conference on Computer Vision (ECCV), 2016</h4>
-		  <a href="https://arxiv.org/abs/1608.00367">
-		  <button class="btn btn-success btn-primary" type="button" )"=""><span class="glyphicon glyphicon-file"></span>PDF</button>
-          </a> 
-          <a href="http://101.110.118.71/personal.ie.cuhk.edu.hk/~ccloy/files/eccv_2016_accelerating_supp.pdf">
-		  <button class="btn btn-success btn-primary" type="button" )"=""><span class="glyphicon glyphicon-file"></span>Supplementary File</button>
-          </a>
-		</blockquote>
-		<h4 style="text-align:justify">&nbsp;</h4>
-		<h4 style="text-align:justify">&nbsp;</h4>
-		
-
-	  </div>
-        <!-- /.row -->
-
-    </div>
-
-    <!-- /.container -->
-
-    <!-- jQuery Version 1.11.0 -->
-    <script src="FSRCNN/js/jquery-1.11.0.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="FSRCNN/js/bootstrap.min.js"></script>
+<div id="wrapperindex">
+<div id="container">
+  <div id="about">
+<font style="font-size: 14pt;" face="Arial">
+<p>I am an associate professor in the School of Mathematical Sciences of <a href="https://www.uestc.edu.cn/" style="color: blue">UESTC (电子科技大学)</a>.</p>
+<p>I received B.S. and Ph.D. degrees (supervised by Prof. Ting-Zhu Huang) from the School of Mathematical Sciences, University of Electronic Science and Technology of China (UESTC), in 2010 and 2016, respectively. From Sept. 2013 to Sept. 2014, I followed <a href="http://casfaculty.case.edu/weihong-guo/" style="color: blue">Prof. Weihong Guo</a> at Case Western Reserve University (CWRU), Cleveland, USA, as a Joint-Training Ph.D. student. In 2017, I was working as a postdoc. by <a href="http://www.math.hkbu.edu.hk/~xuechengtai/HKBU.html" style="color: blue">Prof. Xue-Cheng Tai</a> in HKBU (Hong Kong, China). In addition, I also stayed at Isaac Newton Institute for Mathematical Sciences (Cambridge University) and HKBU for short visits. My research interest is mainly focusing on using PDE, Optimization modeling and Deep learning to address several tasks in image processing and computer vision, e.g., resolution enhancement, restoration, etc.</p></font>
 
 
-
-
-</body></html>
+  </div> 
+ </div>
+</div>
