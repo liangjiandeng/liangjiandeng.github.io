@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>VO+Net: An Adaptive Approach Using Variational Optimization and Deep Learning for Panchromatic Sharpening</title>
+    <title>Hyperspectral Image Super-resolution via Deep Spatio-spectral Attention Convolutional Neural Networks</title>
 
 
     <!-- Custom CSS -->
@@ -78,9 +78,9 @@
         <div class="row">
             <div class="col-lg-12 text-center">
 <!---------------------------------Title---------------------------------------------------- ------>   
-                <h1 align="center">VO+Net: An Adaptive Approach Using Variational Optimization and Deep Learning for Panchromatic Sharpening</h1>
+                <h1 align="center">Hyperspectral Image Super-resolution via Deep Spatio-spectral Attention Convolutional Neural Networks</h1>
 <!---------------------------------Authors---------------------------------------------------- ------>   
-              <p align="center" class="lead STYLE1"><strong>Zhong-Cheng Wu, Ting-Zhu Huang*, Liang-Jian Deng*, Jin-Fan Hu, Gemine Vivone</strong></p>           
+              <p align="center" class="lead STYLE1"><strong>Jin-Fan Hu, Ting-Zhu Huang*, Liang-Jian Deng*, Tai-Xiang Jiang, Gemine Vivone, Jocelyn Chanussot</strong></p>           
 				<p align="center" class="lead"><strong>     </strong></p>
 				<h2 align="center" style="text-align:centre">&nbsp;</h2>
 <!---------------------------------paper &Code link---------------------------------------------------- ------>   	    
@@ -107,24 +107,15 @@
 <!---------------------------------Abstract---------------------------------------------------- ------>   
 				<h2 align="center" style="text-align:centre">Abstract</h2>
 				  <font style="font-size: 13pt;" face="Arial">
-				      <p> Pansharpening refers to a spatio-spectral fusion of a lower spatial resolution multispectral image with a 
-                  high spatial resolution panchromatic image, aiming at obtaining an image with a corresponding high resolution both in the domains. In this paper, 
-                             we propose a generic fusion framework that is able to weightedly combine variational optimization (VO) with deep learning (DL) for the task of 
-                             pansharpening, where these crucial weights directly determining the relative contribution of DL to each pixel are estimated adaptively. This 
-                             framework can benefit from both VO and DL approaches, e.g., the good modeling explanation and data generalization of a VO approach with the
-                             high accuracy of a DL technique thanks to massive data training. The proposed method can be divided into three parts: i) For the VO modeling, 
-                             a general details injection term inspired by the classical multi-resolution analysis is proposed as a spatial fidelity term and a spectral
-                             fidelity employing the multispectral sensor’s modulation transfer functions is also incorporated; ii) For the DL injection, a weighted 
-                             regularization term is designed to introduce deep learning into the variational model; iii) The final convex optimization problem is efficiently 
-                             solved by the designed alternating direction method of multipliers. Extensive experiments both at reduced and full resolution demonstrate that the 
-                             proposed method outperforms recent state-of-the-art pansharpening methods, especially showing a higher accuracy and a significant generalization 
-                             ability. 
+				      <p> 	Hyperspectral images (HSIs) are of crucial importance in order to better understand features from a large amount of spectral channels. Restricted by its inner imaging mechanism, the spatial resolution is often limited for HSIs. To alleviate this issue, in this work, we propose a simple and efficient architecture of deep convolutional neural networks to fuse a low-resolution hyperspectral image (LR-HSI) and a high-resolution multispectral image (HR-MSI), yielding a high-resolution hyperspectral image (HR-HSI). The network is designed to preserve both spatial and spectral information thanks to a new architecture based on i) the use of the LR-HSI at the HR-MSI’s scale to
+	get an output with satisfied spectral preservation and ii) the application of the attention and pixelShuffle modules to extract
+	information, aiming to output high-quality spatial details. Finally, a plain mean squared error loss function is used to measure the performance during the training. Extensive experiments demonstrate that the proposed network architecture achieves the best performance (both qualitatively and quantitatively) compared with recent state-of-the-art hyperspectral image super-resolution approaches. Moreover, other significant advantages can be pointed out by the use of the proposed approach, such as, a better network generalization ability, a limited computational burden, and the robustness with respect to the number of training samples. 
 </h4>
 
 <!---------------------------------Show flowchart figure---------------------------------------------------- ------>   
 		    <p align="center" style="text-align:justify">&nbsp;</p>
 		    <h4 align="center" style="text-align:centre"> The flowchart of VO+Net method for multispectral image pansharpening</h4>
-		<p align="center" style="text-align:centre"><span style="text-align:justify"><img src="materals/02-flowchart_VOFF.png" width="900" height="329" alt="1"></span></p>
+		<p align="center" style="text-align:centre"><span style="text-align:justify"><img src="materals/02-flowchart_HSRnet.png" width="900" height="420" alt="1"></span></p>
 
 <!---------------------------------figure caption---------------------------------------------------- ------>   
 		    <h4 align="center" style="text-align:justify"> </h4>
@@ -139,7 +130,7 @@
 	         </blockquote>
 
 		    <h4 style="text-align:justify"> </h4>
-		    <p align="center" style="text-align:centre"><span style="text-align:justify"><img src="materals/03-results_VOFF.png" width="900" height="667" alt="1"></span></p>
+		    <p align="center" style="text-align:centre"><span style="text-align:justify"><img src="materals/03-results_HSRnet.png" width="900" height="391" alt="1"></span></p>
 
 	    </div>
 	    
@@ -149,15 +140,13 @@
 		  <h2 style="color: blue" style="text-align:left">Bib Citation</h2>
 	          <font style="font-size: 10pt;" face="Arial">
 
-@ARTICLE{Wu2021VO, <br>
-author={Z. C. Wu and T. Z. Huang and L. J. Deng and J. F. Hu and G. Vivone},  <br>
-journal={IEEE Transactions on Geoscience and Remote Sensing},   <br>
-title={VO+Net: An Adaptive Approach Using Variational Optimization and Deep Learning for Panchromatic Sharpening},  <br>
+@ARTICLE{Hu2021Hyperspectral, <br>
+author={Hu, Jin-Fan and Huang, Ting-Zhu and Deng, Liang-Jian and Jiang, Tai-Xiang and Vivone, Gemine and Chanussot, Jocelyn},  <br>
+journal={IEEE Transactions on Neural Networks and Learning  Systems},   <br>
+title={Hyperspectral Image Super-resolution via Deep Spatio-spectral Attention Convolutional Neural Networks},  <br>
 year={2021},  <br>
 volume={},  <br>
 number={},  <br>
-pages={1-16},  <br>
-doi={10.1109/TGRS.2021.3066425},<br>
 }<br>
 			}<br>
 	  </div>
