@@ -1,0 +1,174 @@
+<html lang="en"><head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Hyperspectral Image Super-resolution via Deep Spatio-spectral Attention Convolutional Neural Networks</title>
+
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 20px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    .STYLE1 {font-size: 18px}
+    .STYLE2 {font-size: 14px}
+    #Layer1 {
+	position:absolute;
+	left:105px;
+	top:232px;
+	width:1449px;
+	height:226px;
+	z-index:1;
+}
+    #Layer2 {
+	position:absolute;
+	left:105px;
+	top:459px;
+	width:1450px;
+	height:266px;
+	z-index:2;
+}
+    .STYLE3 {
+	font-size: 16px;
+        font-weight:normal;
+}
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+        <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript">
+            
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-22940424-1']);
+            _gaq.push(['_trackPageview']);
+            
+            (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+            
+        </script>    
+</head>
+
+<p><span class="style8"><font face="Arial">
+<a href="../index.html" style="color: blue"><font size="4" face="Arial">< Home</font></a> &nbsp;&nbsp;&nbsp;&nbsp;
+<a href="../Projects_Res.html" style="color: blue"><font size="4" face="Arial">< Project Home</font></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></span></p>
+	
+<!------------------------------------------------------------------------------------- ------>   
+<!---------------------------------MAIN Body---------------------------------------------------- ------>   
+<!------------------------------------------------------------------------------------- ------>   
+<body data-gr-c-s-loaded="true">
+
+    <!-- Navigation -->
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+<!---------------------------------Title---------------------------------------------------- ------>   
+                <h1 align="center">BAM: Bilateral Activation Mechanism for Image Fusion</h1>
+<!---------------------------------Authors---------------------------------------------------- ------>   
+              <p align="center" class="lead STYLE1"><strong>Zi-Rong Jin, Liang-Jian Deng*, Tian-Jing Zhang, Xiaoxu Jin</strong></p>           
+				<p align="center" class="lead"><strong>     </strong></p>
+				<h2 align="center" style="text-align:centre">&nbsp;</h2>
+<!---------------------------------paper &Code link---------------------------------------------------- ------>   	    
+	    <div class="row">
+		  <blockquote>
+		    <h2 align="left" style="color: blue" style="text-align:left">Paper & Code</h2>
+		    <ul>
+		    <li>
+		        <h4 style="color: red" style="text-align:justify">
+	            Paper: <a href="../papers/2021/bam_mm2021.pdf"><button class="btn btn-success btn-primary" type="button" )"=""><span class="glyphicon glyphicon-file"></span>Click here</button></a></h4>
+	            </li>
+		    </ul>
+
+		    <ul>
+		    <li>
+		        <h4 style="color: red" style="text-align:justify">
+	            Code: <a href="https://github.com/liangjiandeng/BAM"><button class="btn btn-success btn-primary" type="button" )"=""><span class="glyphicon glyphicon-file"></span>Python Code (pytorch)</button></a>
+                           </h4>
+	            </li>
+		    </ul>
+	      </blockquote>
+	  </div>
+    
+<!---------------------------------Abstract---------------------------------------------------- ------>   
+				<h2 align="center" style="text-align:centre">Abstract</h2>
+				  <font style="font-size: 13pt;" face="Arial">
+				      <p> 	As the conventional activation functions such as ReLU, LeakyReLU, and PReLU, the negative parts in feature maps are simply truncated or linearized, 
+                which may result in unflexible structure and undesired information distortion. In this paper, we propose a simple but effective Bilateral 
+                Activation Mechanism (BAM) which could be applied to the activation function to offer an efficient feature extraction model. Based on BAM, 
+                the Bilateral ReLU Residual Block (BRRB) that still sufficiently keeps the nonlinear characteristic of ReLU is constructed to separate the feature maps into two parts, 
+                i.e., the positive and negative components, then adaptively represent and extract the features by two independent convolution layers. Besides, 
+                our mechanism will not increase any extra parameters or computational burden in the network. We finally embed the BRRB into a basic ResNet architecture, called BRResNet, 
+                it is easy to obtain state-of-the-art performance in two image fusion tasks, i.e., pansharpening and hyperspectral image super-resolution (HISR). Additionally, 
+                deeper analysis and ablation study demonstrate the effectiveness of BAM, the lightweight property of the network, etc.
+</h4>
+
+<!---------------------------------Show flowchart figure---------------------------------------------------- ------>   
+		    <p align="center" style="text-align:justify">&nbsp;</p>
+		    <h4 align="center" style="text-align:centre"> The flowchart of BAM</h4>
+		<p align="center" style="text-align:centre"><span style="text-align:justify"><img src="materals/02-flowchart_BAM.png" width="900" height="840" alt="1"></span></p>
+
+<!---------------------------------figure caption---------------------------------------------------- ------>   
+		    <h4 align="center" style="text-align:justify"> </h4>
+		   </div>
+        </div>
+		
+
+<!---------------------------------Results---------------------------------------------------- ------>   	    
+	    <div class="row">
+		  <blockquote>
+		    <h2 align="left" style="color: blue" style="text-align:left">Results</h2>
+	         </blockquote>
+
+		    <h4 style="text-align:justify"> </h4>
+		    <p align="center" style="text-align:centre"><span style="text-align:justify"><img src="materals/03-results_BAM.png" width="900" height="877" alt="1"></span></p>
+
+	    </div>
+	    
+<!---------------------------------Citation---------------------------------------------------- ------>   
+	  <div class="row" >
+		<blockquote>
+		  <h2 style="color: blue" style="text-align:left">Bib Citation</h2>
+	          <font style="font-size: 10pt;" face="Arial">
+              
+@ARTICLE{BAM,  <br>
+author={Zi-Rong Jin , Liang-Jian Deng, Tian-Jing Zhang, Xiaoxu Jin},  <br>
+journal={Proceedings of the 29th ACM International Conference on Multimedia},  <br>
+title={BAM: Bilateral Activation Mechanism for Image Fusion},  <br>
+year={2021},  <br>
+volume={},  <br>
+number={},  <br>
+pages={DOI: 10.1145/3474085.3475571},  <br>
+}<br>
+	  </div>
+    <br>	
+		<br>
+
+
+
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.0 -->
+    <!-- <script src="FSRCNN/js/jquery-1.11.0.js"></script>-->
+
+    <!-- Bootstrap Core JavaScript -->
+    <!--<script src="FSRCNN/js/bootstrap.min.js"></script>-->
+
+
+
+
+</body></html>
